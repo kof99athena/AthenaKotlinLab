@@ -1,19 +1,10 @@
-package com.anehta.athenakotlinlab
+package strings
 
-fun main() {
-    val list = listOf(1, 2, 3)
-    println(jointoString(list, "; ", "(", ")"))
-    println(jointoString(list, prefix = "; ", separator = "(", postfix = ")")) //이름 붙인 인자면 순서 변경해도 상관없다.
-    println(jointoString(list)) //다 생략
-    println(jointoString(list, "; ")) //separator만 작성
-}
-
-//joinToString 함수를 직접 구현해보자
 fun <T> jointoString(
     collection: Collection<T>,
     separator: String = ", ",
     prefix: String = "",
-    postfix: String =""
+    postfix: String = ""
 ): String {
     val result = StringBuilder(prefix)
     for ((index, element) in collection.withIndex()) {
@@ -25,3 +16,5 @@ fun <T> jointoString(
     result.append(postfix)
     return result.toString()
 }
+
+fun String.lastChar(): Char = this.get(this.length - 1)

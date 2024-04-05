@@ -10,7 +10,7 @@ fun main() {
 
     val reader2 = BufferedReader(StringReader("hello"))
     readNumber(reader2) //null
-
+    println()
 }
 
 fun readNumber(reader: BufferedReader) {
