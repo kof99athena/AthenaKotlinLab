@@ -11,7 +11,6 @@ public class ButtonTest implements ViewComponent {
 
     @Override
     public void restoreState(@NonNull State state) {
-        ViewComponent.super.restoreState(state);
     }
 
     static public class ButtonState implements State { /**/
