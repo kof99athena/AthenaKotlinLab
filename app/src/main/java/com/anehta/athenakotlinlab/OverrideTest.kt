@@ -18,6 +18,7 @@ open class View {
 
 class MyButton : View {
     constructor(ctx: Context) : super(ctx)
+    //constructor(ctx: Context) : this(ctx, MY_STYLE) // 클래스 자신의 다른 생성자를 호출함 -> 객체 생성을 위임한다.
     constructor(ctx: Context, attr: AttributeSet) : super(ctx, attr)
 }
 
