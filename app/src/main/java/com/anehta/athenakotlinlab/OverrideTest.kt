@@ -1,10 +1,26 @@
 package com.anehta.athenakotlinlab
 
-import strings.lastChar
+import android.content.Context
+import android.util.AttributeSet
 
 open class View {
+    constructor(ctx: Context) {
+
+    }
+    constructor(ctx: Context, attr: AttributeSet) {
+
+    }
+
+    constructor()
+
     open fun click() = println("View Clicked!")
 }
+
+class MyButton : View {
+    constructor(ctx: Context) : super(ctx)
+    constructor(ctx: Context, attr: AttributeSet) : super(ctx, attr)
+}
+
 
 class Button : View() {
     override fun click() {
