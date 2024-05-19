@@ -7,6 +7,9 @@ fun main() {
 
     val processed = hashSetOf(Client("고양이", 1111))
     println(processed.contains(Client("고양이", 1111))) //true
+
+    val lee = Client("강아지", 2222)
+    println(lee.copy(postalCode = 4000))
 }
 
 class Client(val name: String, val postalCode: Int) {
@@ -24,4 +27,6 @@ class Client(val name: String, val postalCode: Int) {
     //결과값
     //override 시: Client(name=kim, postalCode=1111)
     //override 안하면: com.anehta.athenakotlinlab.dataclasstest.Client@7c30a502
+
+    fun copy(name: String = this.name, postalCode: Int = this.postalCode) = Client(name, postalCode)
 }
